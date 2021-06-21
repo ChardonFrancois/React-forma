@@ -1,11 +1,12 @@
+import React from 'react';
 import { useState } from 'react';
 import Item from './Item';
 
 function App() {
   const [monState, setMonState] = useState(10);
 
-  const modifyState = () => {
-    setMonState('hello ma couille');
+  const modifyState = (data) => {
+    setMonState(data);
   };
 
   return (
