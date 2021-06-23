@@ -5,29 +5,24 @@ function App() {
 
   const changeState = () => setToggle(!toggle);
 
-  let toggleContenu;
+  // let toggleContenu;
 
-  if (toggle) {
-    toggleContenu = <h1>State : TRUE</h1>;
-  } else {
-    toggleContenu = <h1>State : FALSE</h1>;
-  }
+  // if (toggle) {
+  //   toggleContenu = <h1>State : TRUE</h1>;
+  // } else {
+  //   toggleContenu = <h1>State : FALSE</h1>;
+  // }
 
-  if (toggle) {
-    return (
-      <div className="App">
-        {toggleContenu}
-        <button onClick={changeState}> Change State</button>
-      </div>
-    );
-  } else if (toggle === false) {
-    return (
-      <div className="App">
-        {toggleContenu}
-        <button onClick={changeState}> Change State</button>
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      {/* fonctionne lorsque la valeur est true */}
+      {toggle && <h1>State : TRUE</h1>}
+      {/* operateur ternaire  */}
+      {toggle ? <h1>State : TRUE</h1> : <h1>State : FALSE</h1>}
+      {/* {toggleContenu} */}
+      <button onClick={changeState}> Change State</button>
+    </div>
+  );
 }
 
 export default App;
