@@ -1,12 +1,33 @@
-import Item from './components/Item/Item';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>hello depuis App.</h1>
-      <Item />
-    </div>
-  );
+  const [toggle, setToggle] = useState(true);
+
+  const changeState = () => setToggle(!toggle);
+
+  let toggleContenu;
+
+  if (toggle) {
+    toggleContenu = <h1>State : TRUE</h1>;
+  } else {
+    toggleContenu = <h1>State : FALSE</h1>;
+  }
+
+  if (toggle) {
+    return (
+      <div className="App">
+        {toggleContenu}
+        <button onClick={changeState}> Change State</button>
+      </div>
+    );
+  } else if (toggle === false) {
+    return (
+      <div className="App">
+        {toggleContenu}
+        <button onClick={changeState}> Change State</button>
+      </div>
+    );
+  }
 }
 
 export default App;
