@@ -6,7 +6,7 @@ import Form from './components/Form/Form';
 function App() {
   return (
     <div className="App">
-      <h1 className="text-center mt-3">To-Do List</h1>
+      <h1 className="text-center mt-3">To-Do List journalières</h1>
       <Form />
     </div>
   );

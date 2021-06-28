@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Form from '../Form/Form';
-
 export default function Item(props) {
   return (
     <div>
